@@ -1,13 +1,13 @@
 {{ define "main"}}
 {{ range .Pages}}
 <div class="post">
+  <hr>
   <h3 class="title">
     <a href="{{.Permalink}}">{{ .Title }}</a>
   </h3>
-  <h5 class="date">{{ dateFormat "Monday, Jan 2, 2006" .Params.lastUpdated }}</h5>
+  <h5 class="date">{{ dateFormat "Mon, Jan 2, 2006" .Params.lastUpdated }}</h5>
   <hr>
   <p>{{ .Summary }}</p>
-  <hr>
 </div>
 {{ end }}
 {{ end }}
