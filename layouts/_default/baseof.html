@@ -2,11 +2,15 @@
 <html>
 {{- partial "head.html" . -}}
 
-<body style="margin: 0">
+<body>
     {{- partial "header.html" . -}}
     <div id="content">
-        {{- block "main" . }}{{- end }}
+        <main>
+            {{- block "main" . }}{{- end }}
+        </main>
     </div>
+    <span class="spacer"></span>
+
     {{- partial "footer.html" . -}}
 </body>
 
