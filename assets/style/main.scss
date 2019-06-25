@@ -1,6 +1,13 @@
+// GLOBAL
 html, body {
   background-color: whitesmoke;
   height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -14,15 +21,36 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+// COMPONENTS
 .spacer {
   flex: 1;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+.window {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: gray solid 3px;
+  margin: 5px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
 }
+
+.card {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: gray 1px 1px 5px;
+}
+
+// SECTIONS
 
 .header {
   position: fixed;
@@ -59,9 +87,22 @@ footer {
   margin: 30px 0px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+#bio {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  max-height: 200px;
+  .words {
+    max-width: 350px;
+    text-align: right;
+  }
 }
 
 main {
   max-width: 700px;
+  overflow: scroll;
 }
 

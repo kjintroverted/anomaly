@@ -1,0 +1,13 @@
+{{ with .GetPage "about/bio" }}
+{{ if ne . nil }}
+<span id="bio" class="card">
+  <div class="words">
+    <h3>{{ .Params.name }}</h3>
+    <p>{{ .Content }}</p>
+  </div>
+  <div class="window">
+    <img src="{{ .Params.imageURL }}" onclick="window.open('{{ .Permalink }}')">
+  </div>
+</span>
+{{ end }}
+{{ end }}
