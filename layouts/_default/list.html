@@ -1,5 +1,6 @@
 {{ define "main"}}
 {{ range .Pages}}
+{{ if eq .File.Dir "posts/"}}
 <div class="post">
   <hr>
   <h3 class="title">
@@ -9,5 +10,6 @@
   <hr>
   <p>{{ .Summary }}</p>
 </div>
+{{ end }}
 {{ end }}
 {{ end }}
