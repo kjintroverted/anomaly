@@ -1,0 +1,40 @@
+#bio {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  .words {
+    opacity: .5;
+    max-width: 350px;
+    text-align: right;
+    transition: opacity .5s ease;
+  }
+}
+#bio:hover .words {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  #bio {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 200px;
+
+    .words {
+      order: 10;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #bio {
+    justify-content: flex-start;
+    .words {
+      display: none;
+    }
+    .window {
+      height: 70px;
+      width: 70px;
+    }
+  }
+  
+}

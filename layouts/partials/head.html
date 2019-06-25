@@ -1,7 +1,15 @@
 {{ $mainStyle := resources.Get "style/main.scss" | resources.ToCSS }}
+{{ $bioStyle := resources.Get "style/bio.scss" | resources.ToCSS }}
+{{ $headerStyle := resources.Get "style/header.scss" | resources.ToCSS }}
+{{ $postStyle := resources.Get "style/post.scss" | resources.ToCSS }}
 
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+
 <link href="{{ $mainStyle.RelPermalink }}" rel="stylesheet">
+<link href="{{ $bioStyle.RelPermalink }}" rel="stylesheet">
+<link href="{{ $headerStyle.RelPermalink }}" rel="stylesheet">
+<link href="{{ $postStyle.RelPermalink }}" rel="stylesheet">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <title>Processing...</title>

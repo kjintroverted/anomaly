@@ -2,12 +2,11 @@
 {{ range .Pages}}
 {{ if eq .File.Dir "posts/"}}
 <div class="post">
-  <hr>
+  <h5 class="date">{{ dateFormat "January 2, 2006" .Params.lastUpdated }}</h5>
   <h3 class="title">
     <a href="{{.Permalink}}">{{ .Title }}</a>
   </h3>
-  <h5 class="date">{{ dateFormat "Mon, Jan 2, 2006" .Params.lastUpdated }}</h5>
-  <hr>
+  <div class="line"></div>
   <p>{{ .Summary }}</p>
 </div>
 {{ end }}

@@ -1,0 +1,30 @@
+.post {
+  padding-right: 5px;
+  margin: 25px 0px;
+
+  .title, .date {
+    margin: 0;
+  }
+
+  .date {
+    opacity: .5;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .line {
+    height: 3px;
+    width: 30px;
+    background: black;
+    transition: width .5s ease;
+  }
+}
+
+.post:hover, .post:focus {
+  .line {
+    width: 100%;
+  }
+}
