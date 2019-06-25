@@ -1,6 +1,6 @@
 {{ with .GetPage "about/bio" }}
 {{ if ne . nil }}
-<span id="bio" class="card">
+<span id="bio">
   <div class="words">
     <h3>{{ .Params.name }}</h3>
     <p>{{ .Content }}</p>
