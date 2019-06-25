@@ -1,2 +1,5 @@
+{{ $mainStyle := resources.Get "style/main.scss" | resources.ToCSS }}
+
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+<link href="{{ $mainStyle.RelPermalink }}" rel="stylesheet">
 <title>Processing...</title>
