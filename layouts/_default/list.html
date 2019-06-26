@@ -1,6 +1,5 @@
 {{ define "main"}}
-{{ range .Pages}}
-{{ if eq .File.Dir "posts/"}}
+{{ range (( where .Pages "Section" "posts" ).ByParam "lastUpdated").Reverse  }}
 <div class="post">
   <h5 class="date">{{ dateFormat "January 2, 2006" .Params.lastUpdated }}</h5>
   <h3 class="title">
@@ -9,6 +8,5 @@
   <div class="line"></div>
   <p>{{ .Summary }}</p>
 </div>
-{{ end }}
 {{ end }}
 {{ end }}
